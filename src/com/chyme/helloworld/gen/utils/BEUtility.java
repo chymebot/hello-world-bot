@@ -5,23 +5,23 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map.Entry;
 
-import com.chyme.helloworld.gen.be.BE_HelloWorld;
+import com.chyme.helloworld.gen.be.BE_HelloWorldSample;
 import com.unvired.lib.utility.BusinessEntity;
 import com.unvired.lib.utility.Structure;
 
 public class BEUtility
 {
-	public static List<BE_HelloWorld> getBE_HelloWorld(List<BusinessEntity> beList)
+	public static List<BE_HelloWorldSample> getBE_HelloWorldSample(List<BusinessEntity> beList)
 	{
-		ArrayList<BE_HelloWorld> typedBEs = new ArrayList<BE_HelloWorld>();
+		ArrayList<BE_HelloWorldSample> typedBEs = new ArrayList<BE_HelloWorldSample>();
 
 		if(beList != null)
 		{
 			for (BusinessEntity be : beList)
 			{
-				if(be.getName().equals(BE_HelloWorld.NAME))
+				if(be.getName().equals(BE_HelloWorldSample.NAME))
 				{
-					BE_HelloWorld typedBE = new BE_HelloWorld();
+					BE_HelloWorldSample typedBE = new BE_HelloWorldSample();
 					typedBEs.add(typedBE);
 					for (Entry<String, String> field : be.getHeader().getFieldsInOrder().entrySet())
 					{
